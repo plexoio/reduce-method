@@ -65,6 +65,20 @@ let yearsProfession = teamMembers.reduce((initial, job) => {
 
 console.log(yearsProfession);
 
+// OR
+
+// let yearsProfession = teamMembers.reduce((initial, job) => {
+//   let key = job.profession;
+//   let names = job.name;
+//   if (!initial[key]) {
+//     initial[key] = [names]; // property - value relationship
+//   } else {
+//     initial[key].push(names); // increment of property value
+//   }
+//   return initial
+// },{});
+
+
 // Reminder to create an object and add property-value pairs to it
 let accTest = {
     hola:'this',

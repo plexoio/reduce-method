@@ -45,3 +45,22 @@ const biggest = students.reduce((start, object) => {
 }, {});
 
 console.log(biggest);
+
+// OR
+
+const biggest2 = students.reduce((acc, cur) => {
+    acc = acc.max > cur.results.english ? acc: {name:cur.name, max:cur.results.english};
+    return acc;
+    }, {name: '', max: 0});
+console.log(biggest2);
+
+/* Using destructuring 
+const biggest = students.reduce(({max, name}, {name:n, results:{english}}) => {
+    if(max < english) {
+        acc = {name:n, max: english};
+    }
+    return acc;
+    }, {name: '', max: 0});
+    
+console.log(biggest);
+*/
